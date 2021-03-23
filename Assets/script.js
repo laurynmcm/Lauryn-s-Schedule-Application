@@ -1,3 +1,5 @@
+//variable for clock
+var time;
 
 //variable to grabe the table
 var table = document.querySelector("table");
@@ -82,5 +84,129 @@ slot7.textContent = localStorage.getItem("3pm");
 slot8.textContent = localStorage.getItem("4pm");
 slot9.textContent = localStorage.getItem("5pm");
 
-// var time = moment().format("hh:mm:ss");
-// $("#timeStamp").text(time);
+function clock(){
+   time = moment().format("hh:mm:ss");
+   $("#timeStamp").text(time);
+}
+
+//variables for time colors
+var nineAM = "09:00:00";
+var tenAM = "10:00:00";
+var elevenAM = "11:00:00";
+var twelvePM = "12:00:00";
+var onePM = "01:00:00";
+var twoPM = "02:00:00";
+var threePM = "03:00:00";
+var fourPM = "04:00:00";
+var fivePM = "05:00:00";
+
+clock();
+setInterval(clock, 1000);
+
+if (time >= nineAM){
+   $("#nine").css("background-color", "orange");
+   $("#ten").css("background-color", "#77dd77");
+   $("#eleven").css("background-color", "#77dd77");
+   $("#twelve").css("background-color", "#77dd77");
+   $("#one").css("background-color", "#77dd77");
+   $("#two").css("background-color", "#77dd77");
+   $("#three").css("background-color", "#77dd77");
+   $("#four").css("background-color", "#77dd77");
+   $("#five").css("background-color", "#77dd77");
+}
+
+if (time >= tenAM){
+   $("#nine").css("background-color", "#718b91");
+   $("#ten").css("background-color", "orange");
+   $("#eleven").css("background-color", "#77dd77");
+   $("#twelve").css("background-color", "#77dd77");
+   $("#one").css("background-color", "#77dd77");
+   $("#two").css("background-color", "#77dd77");
+   $("#three").css("background-color", "#77dd77");
+   $("#four").css("background-color", "#77dd77");
+   $("#five").css("background-color", "#77dd77");
+}
+
+if (time >= elevenAM){
+   $("#nine").css("background-color", "#718b91");
+   $("#ten").css("background-color", "#718b91");
+   $("#eleven").css("background-color", "orange");
+   $("#twelve").css("background-color", "#77dd77");
+   $("#one").css("background-color", "#77dd77");
+   $("#two").css("background-color", "#77dd77");
+   $("#three").css("background-color", "#77dd77");
+   $("#four").css("background-color", "#77dd77");
+   $("#five").css("background-color", "#77dd77");
+}
+
+if (time >= twelvePM){
+   $("#nine").css("background-color", "#718b91");
+   $("#ten").css("background-color", "#718b91");
+   $("#eleven").css("background-color", "#718b91");
+   $("#twelve").css("background-color", "orange");
+   $("#one").css("background-color", "#77dd77");
+   $("#two").css("background-color", "#77dd77");
+   $("#three").css("background-color", "#77dd77");
+   $("#four").css("background-color", "#77dd77");
+   $("#five").css("background-color", "#77dd77");
+}
+
+if (time >= onePM){
+   $("#nine").css("background-color", "#718b91");
+   $("#ten").css("background-color", "#718b91");
+   $("#eleven").css("background-color", "#718b91");
+   $("#twelve").css("background-color", "#718b91");
+   $("#one").css("background-color", "orange");
+   $("#two").css("background-color", "#77dd77");
+   $("#three").css("background-color", "#77dd77");
+   $("#four").css("background-color", "#77dd77");
+   $("#five").css("background-color", "#77dd77");
+}
+
+if (time >= twoPM){
+   $("#nine").css("background-color", "#718b91");
+   $("#ten").css("background-color", "#718b91");
+   $("#eleven").css("background-color", "#718b91");
+   $("#twelve").css("background-color", "#718b91");
+   $("#one").css("background-color", "#718b91");
+   $("#two").css("background-color", "orange");
+   $("#three").css("background-color", "#77dd77");
+   $("#four").css("background-color", "#77dd77");
+   $("#five").css("background-color", "#77dd77");
+}
+
+if (time >= threePM){
+   $("#nine").css("background-color", "#718b91");
+   $("#ten").css("background-color", "#718b91");
+   $("#eleven").css("background-color", "#718b91");
+   $("#twelve").css("background-color", "#718b91");
+   $("#one").css("background-color", "#718b91");
+   $("#two").css("background-color", "#718b91");
+   $("#three").css("background-color", "orange");
+   $("#four").css("background-color", "#77dd77");
+   $("#five").css("background-color", "#77dd77");
+}
+
+if (time >= fourPM){
+   $("#nine").css("background-color", "#718b91");
+   $("#ten").css("background-color", "#718b91");
+   $("#eleven").css("background-color", "#718b91");
+   $("#twelve").css("background-color", "#718b91");
+   $("#one").css("background-color", "#718b91");
+   $("#two").css("background-color", "#718b91");
+   $("#three").css("background-color", "#718b91");
+   $("#four").css("background-color", "orange");
+   $("#five").css("background-color", "#77dd77");
+}
+
+if (time >= fivePM){
+   $("#nine").css("background-color", "#718b91");
+   $("#ten").css("background-color", "#718b91");
+   $("#eleven").css("background-color", "#718b91");
+   $("#twelve").css("background-color", "#718b91");
+   $("#one").css("background-color", "#718b91");
+   $("#two").css("background-color", "#718b91");
+   $("#three").css("background-color", "#718b91");
+   $("#four").css("background-color", "#718b91");
+   $("#five").css("background-color", "orange");
+}
